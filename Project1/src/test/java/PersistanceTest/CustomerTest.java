@@ -46,8 +46,6 @@ public class CustomerTest {
 	@Test
 	public void testCreate() throws SQLException {
 
-		when(connect.createStatement()).thenReturn(mockstatement);
-
 		int CID = 1010;
 		String fname = "Dolly";
 		String lname = "Pitz";
@@ -55,11 +53,12 @@ public class CustomerTest {
 		String pcode = "sk6 6vc";
 		String city = "Stockport";
 
-		customerData.createCustomer(CID, fname, lname, address, pcode, city);
-
 		String expectedSql = "INSERT INTO customer (CID, first_name, last_name, adresss, postcode, city) VALUES (\""
 				+ CID + "\", \"" + fname + "\", \"" + lname + "\", \"" + address + "\", \"" + pcode + "\", \"" + city
 				+ "\")";
+
+		when(connect.createStatement()).thenReturn(mockstatement);
+		customerData.createCustomer(CID, fname, lname, address, pcode, city);
 		verify(mockstatement).executeUpdate(expectedSql);
 
 	}

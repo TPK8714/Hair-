@@ -54,8 +54,8 @@ public class Order_Test {
 
 		orderData.createOrders(OID, fk_CID, fk_PID, Quantity);
 
-		String newSql = "INSERT INTO Orders (OID, fk_CID, fk_PID) VALUES (" + OID + ", \"" + fk_CID + "\", \"" + fk_PID
-				+ "\", \"" + Quantity + "\")";
+		String newSql = "INSERT INTO Orders (OID, fk_CID, fk_PID, quantity) VALUES (" + OID + ", \"" + fk_CID + "\", \""
+				+ fk_PID + "\", \"" + Quantity + "\")";
 		verify(mockStmnt).executeUpdate(newSql);
 
 	}

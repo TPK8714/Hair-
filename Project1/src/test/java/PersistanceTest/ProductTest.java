@@ -49,8 +49,8 @@ public class ProductTest {
 		when(connect.createStatement()).thenReturn(mockstatement);
 
 		int PID = 1009;
-		String Name = "Kitz";
-		String Size = "22 Orange drive";
+		String Name = "Repair Mouse";
+		String Size = "450mls";
 		double Price = 7.99;
 		int Qty = 500;
 
