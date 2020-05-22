@@ -1,2 +1,2 @@
-# Hair-
-Create an application written in Java  which interacts with a Managed Database.
+# Cantu_Hair_Care
+An aplication that allows written java to interacts with a Managed Database.
