@@ -9,6 +9,12 @@ public class Main_Run {
 
 	private static Scanner scan1 = new Scanner(System.in);
 
+	static String getAction3() {
+		System.out.println("Welcome to Cantu Hair Care");
+		System.out.println("Type 1 for customer, Type 2 for products, type 3 for an order");
+		return scan1.nextLine();
+	}
+
 	public static void main(String[] args) throws SQLException {
 		Connect.connect();
 
@@ -43,11 +49,6 @@ public class Main_Run {
 			scan1.close();
 			logic.close();
 		}
-	}
-
-	static String getAction3() {
-		System.out.println("Type 1 for customer, Type 2 for products, type 3 for an order");
-		return scan1.nextLine();
 	}
 
 }
